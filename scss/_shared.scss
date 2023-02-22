@@ -1,0 +1,56 @@
+.main-title {
+  color: $accentColor;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 3.6px
+}
+
+.btn {
+  border-radius: 100vw;
+  padding: 12px 27px;
+  border: none;
+  cursor: pointer;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+
+  &__phone-number {
+    margin: 0 40px 0 0;
+  }
+
+  &__call-btn {
+    @include button (transparent, $darkColor, $accentColor);
+  }
+}
+
+
+.link {
+  text-decoration: none;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: $darkColor;
+  bottom: -4px;
+  left: 0;
+  border-radius: 100vw;
+  transition: all 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.input {
+  border-radius: 100vw;
+  padding: 9px 25px;
+  border: none;
+}

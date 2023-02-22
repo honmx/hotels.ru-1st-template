@@ -1,0 +1,22 @@
+@mixin button ($bgColor, $fontColor, $borderColor) {
+  background-color: $bgColor;
+  color: $fontColor;
+  border: 2px solid $borderColor;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @if $bgColor == transparent and $fontColor == $darkColor {
+      background-color: $accentColor;
+      color: $lightColor;
+    }
+    @if $bgColor == transparent and $fontColor == $lightColor {
+      background-color: $lightColor;
+      color: $accentColor
+    }
+    @if $bgColor == $accentColor {
+      background-color: $lightColor;
+      color: $accentColor;
+      border-color: $accentColor;
+    }
+  }
+}
